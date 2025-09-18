@@ -33,7 +33,7 @@ pipeline {
                     docker build . -t dhiraj2001/react-cicd
 
                     echo logging into Docker Hub
-                    docker login -u dhiraj2001 -p Hello1234
+                    docker login -u %DOCKER_USERNAME% -p %DOCKER_PASSWORD%
 
                     echo Pushing Docker image
                     docker push dhiraj2001/react-cicd
