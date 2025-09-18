@@ -11,17 +11,17 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-                sh 'npm install'
+                bat 'npm install'
             }
         }
         stage('Build Application') {
             steps {
-                sh 'npm run build'
+                bat 'npm run build'
             }
         }
         stage('Running Test Cases') {
             steps {
-                sh 'npm run test'
+                bat 'npm run test'
             }
         }
     }
